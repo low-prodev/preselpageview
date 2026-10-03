@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Continue pelo WhatsApp</title>
+  <meta name="description" content="Continue seu atendimento diretamente pelo WhatsApp.">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1787284662173454');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1787284662173454&ev=PageView&noscript=1" alt="">
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    :root {
+      --bg: #06100d;
+      --text: #f2f7f5;
+      --muted: #a9bab4;
+      --accent: #25d366;
+      --accent-dark: #128c4a;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { margin: 0; min-height: 100%; }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: max(24px, env(safe-area-inset-top)) 20px max(24px, env(safe-area-inset-bottom));
+      background: radial-gradient(circle at center, #0d2a21 0%, var(--bg) 55%, #000 100%);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      text-align: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Glow discreto de fundo */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: min(620px, 140vw);
+      height: min(620px, 140vw);
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(37, 211, 102, 0.22) 0%, transparent 70%);
+      filter: blur(70px);
+      animation: glow 7s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 440px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      animation: enter 0.8s ease-out both;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(26px, 7vw, 34px);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin: 0;
+      max-width: 34ch;
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 56px;
+      margin-top: 10px;
+      padding: 16px 28px;
+      border-radius: 14px;
+      background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+      color: #04140c;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      box-shadow: 0 0 28px rgba(37, 211, 102, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(37, 211, 102, 0.55); }
+    .btn:active { transform: scale(0.98); }
+    .btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+    @keyframes glow {
+      from { opacity: 0.45; transform: translate(-50%, -50%) scale(1); }
+      to   { opacity: 0.8;  transform: translate(-50%, -50%) scale(1.15); }
+    }
+
+    @keyframes enter {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (min-width: 480px) {
+      .btn { width: auto; min-width: 280px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Atendimento pelo WhatsApp</h1>
+    <p>Toque no botão abaixo para continuar a conversa diretamente pelo WhatsApp.</p>
+    <a class="btn" href="https://wa.link/c07s7e" target="_blank" rel="noopener noreferrer">CONTINUAR NO WHATSAPP</a>
+  </main>
+</body>
+</html>
